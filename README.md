@@ -8,4 +8,4 @@ required python 2.7.x
 Developed on April 18, 2017.
 
 
-<span color="red">Note: when modifying and distributing the script, leave the due credits.</span>
+<h1>Note: when modifying and distributing the script, leave the due credits.</h1>
