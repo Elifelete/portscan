@@ -6,3 +6,6 @@ I take no responsibilities for the use of this program!
 required python 2.7.x
 
 Developed on April 18, 2017.
+
+
+<span style="color: red">Note: when modifying and distributing the script, leave the due credits.</span>
