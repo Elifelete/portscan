@@ -42,10 +42,10 @@ def menu():
         elif op == "4":
             print(vermelho + "Bye...")
             time.sleep(1)
-            print(azul + "[☮] thanks [☮]")
+            print(azul + "[✓] thanks [✓]")
             time.sleep(0.5)
         else:
-            print vermelho + "\n   [☣] command invalid, returning to menu [☣]"
+            print vermelho + "\n   [✘] command invalid, returning to menu [✘]"
             time.sleep(3)
             os.system("reset")
             menu()
@@ -68,7 +68,7 @@ def option1():
             print vermelho + str(port) + ' -> Port closed'
 
         print verde + '\n   ---> Scan Finalized <---'
-        time.sleep(5)
+        time.sleep(4)
         menu()
 
 def option2():
@@ -76,21 +76,21 @@ def option2():
     port1 = int(raw_input("Home port: "))
     port2 = int(raw_input("End port: "))
     ports = range(port1, port2+1)
+    print verde + "\n     ====================="
+    print "          ✓ Scanning ✓    "
+    print "     ====================="
 
     for port in ports:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.settimeout(0.6)
+        client.settimeout(0.15)
         code = client.connect_ex((ip, port))
 
         if code == 0:
             print ""
             print verde + (str(port) + " -> Port open")
-        else:
-            print ""
-            print vermelho + (str(port) + " -> Port closed")
 
     print verde + '\n   ---> Scan Finalized <---'
-    time.sleep(5)
+    time.sleep(4)
     menu()
 
 def option3():
@@ -107,7 +107,7 @@ def option3():
 
     for port in ports:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.settimeout(0.6)
+        client.settimeout(0.15)
         code = client.connect_ex((ip, port))
 
         if code == 0:
@@ -117,7 +117,7 @@ def option3():
             print ""
             print vermelho + (str(port) + " -> Port closed")
     print verde + '\n   ---> Scan Finalized <---'
-    time.sleep(5)
+    time.sleep(4)
     menu()
 
 menu()
