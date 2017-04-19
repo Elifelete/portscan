@@ -18,11 +18,11 @@ os.system('reset')
 def menu():
     banner = azul + '''
         +###############################+
-        |  Port Scan v1.0               |
+        |  Port Scan v1.5               |
         |  Coded by SystMX              |
         |  date: 18/04/2017             |
         |  github: github.com/Elifelete |
-        |  ®Systmx                      |
+        |  ©Systmx                      |
         +###############################+
                
         [1]one port 
@@ -32,7 +32,7 @@ def menu():
     '''
     print banner
     try:
-        op = raw_input(verde + "Choice an option: ")
+        op = raw_input(verde + "Choose an option: ")
         if op == "1":
             option1()
         elif op == "2":
@@ -40,20 +40,23 @@ def menu():
         elif op == "3":
             option3()
         elif op == "4":
-            print(azul + "Bye...")
-            time.sleep(1.5)
-            print(azul + "...Bye")
+            print(vermelho + "Bye...")
             time.sleep(1)
+            print(azul + "[☮] thanks [☮]")
+            time.sleep(0.5)
         else:
+            print vermelho + "\n   [☣] command invalid, returning to menu [☣]"
+            time.sleep(3)
             os.system("reset")
             menu()
-    except:
-        print (vermelho + "Comand invalid!")
+    except KeyboardInterrupt:
+        print (vermelho + "\nYou press ctrl+c, exiting...")
+        time.sleep(2)
         sys.exit()
 
 def option1():
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.settimeout(0.15)
+        client.settimeout(3)
         ip = raw_input(verde + "\nEnter ip or Address: ")
         port = int(raw_input("Enter port: "))
         code = client.connect_ex((ip, port))
@@ -76,7 +79,7 @@ def option2():
 
     for port in ports:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.settimeout(0.15)
+        client.settimeout(0.6)
         code = client.connect_ex((ip, port))
 
         if code == 0:
@@ -104,7 +107,7 @@ def option3():
 
     for port in ports:
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.settimeout(0.15)
+        client.settimeout(0.6)
         code = client.connect_ex((ip, port))
 
         if code == 0:
