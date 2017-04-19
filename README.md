@@ -16,6 +16,7 @@ To use.
 $ ./portscan.py
 ```
 > Dependency python2.7
+> OS linux
 
 Developed on April 18, 2017.
 
