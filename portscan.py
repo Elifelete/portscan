@@ -19,10 +19,8 @@ def menu():
     banner = azul + '''
         +###############################+
         |  Port Scan v1.5               |
-        |  Coded by SystMX              |
         |  date: 18/04/2017             |
         |  github: github.com/Elifelete |
-        |  ©Systmx                      |
         +###############################+
                
         [1]one port 
