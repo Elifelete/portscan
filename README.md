@@ -5,14 +5,14 @@ I am not responsible for the use of this program!
 
 ### Installation and use.
 
-```python
+```sh
 $ sudo apt-get install git
 $ git clone https://github.com/Elifelete/portscan.git
 $ cd portscan
 $ sudo chmod +x portscan.py
 ```
 To use.
-```python
+```sh
 $ ./portscan.py
 ```
 > Dependency python2.7 -
